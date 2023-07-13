@@ -11,29 +11,34 @@
 
     <body>
         <header>
-            <section id="scoresheet">
-                <a href="./highscores.html">View High Scores</a>
-            </section>
+            <h4 id="view-high-scores">View High Scores</h4>
             <section id="countdown-timer">
-                <p>Time Remaining: <span id="timer">0</span></p>
+                <h4>Time Remaining: <span id="timer">0</span></h4>
             </section>
         </header>
-        <container>
+        <div id="starting-container" class="show">
             <div id="quiz-start-container">
-                <h1>Welcome to the Code Quiz!</h1>
-                <p>Try answering the following code-related questions within the time limit. You have 75 seconds to complete the quiz. Don't Forget: For each incorrect answer, you will be docked 5 seconds from the timer. If the timer hits 0, it's game over!</p>
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try answering the following code-related questions within the time limit. You have 100 seconds to complete the quiz. Don't Forget: For each incorrect answer, you will be docked 7 seconds from the timer. If the timer hits 0, it's game over!</p>
                 <button id="startBtn" class="startbtn btn">Start Quiz</button>
             </div>
-        </container>
+        </div>
+
+        <div id="question-container" class="hide">
+            <div id="quiz-questions">
+                <div id="question"></div>
+                <div id="answer-buttons" class="btn-grid"></div>
+            </div>
+        </div>
 
         <div id="quiz-end-container" class="hide">
             <div class="end-container">
                 <div id="score-board">
-                    <h1>Finished!</h1>
+                    <h1>All done!</h1>
                 </div>
                 <form id="initials-form" class="initials">
                     <p>Enter Initials:
-                        <input type="text" name="initials" class="text-input" />
+                        <input type="text" name="initials" id="initials" class="text-input" />
                         <button id="submit-score" class="btn" type="submit">Submit</button>
                     </p>
                 </form>
